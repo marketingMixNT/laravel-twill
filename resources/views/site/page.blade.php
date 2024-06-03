@@ -6,6 +6,8 @@
 @vite('resources/css/app.css') 
 
 <body>
+    <x-menu/> 
+
     <div class="mx-auto max-w-2xl">
         {!! $item->renderBlocks() !!}
     </div>
