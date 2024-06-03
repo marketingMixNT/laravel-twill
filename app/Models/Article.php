@@ -101,6 +101,7 @@ class Article extends Model implements LocalizedUrlRoutable
         'published',
         'title',
         'description',
+        'text'
     ];
 
     public $translatedAttributes = [
