@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
 use A17\Twill\Services\Listings\Columns\Text;
+use A17\Twill\Services\Forms\Fields\BlockEditor;
+use A17\Twill\Services\Forms\Fields\Medias;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
@@ -30,6 +32,12 @@ class ArticleController extends BaseModuleController
         $form->add(
             Input::make()->name('description')->label('Description')->translatable()
         );
+        $form->add(
+            Medias::make()->name('cover')->label('Cover image')
+        );
+        $form->add(
+            BlockEditor::make()
+        );
 
         return $form;
     }
@@ -44,6 +52,7 @@ class ArticleController extends BaseModuleController
         $table->add(
             Text::make()->field('description')->title('Description')
         );
+        
 
         return $table;
     }
