@@ -1,6 +1,10 @@
 <?php
 
 return [
+
+    'locale' => 'pl',
+    'fallback_locale' => 'en',
+
     'default_crops' => [
         'page_cover' => [
             'default' => [
